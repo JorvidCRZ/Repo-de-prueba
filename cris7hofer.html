@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Guía Básica de Git</title>
+    <style>
+        /* Paleta de colores */
+        :root {
+            --negro: #1a1a1a;
+            --blanco: #f2f2f2;
+            --plateado: #c0c0c0;
+            --gris: #333;
+            --gris-claro: #666;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--negro);
+            color: var(--blanco);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: var(--plateado);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: var(--plateado);
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: var(--gris);
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        code {
+            background-color: var(--negro);
+            padding: 8px 12px;
+            border-radius: 6px;
+            color: var(--plateado);
+            font-size: 1.1em;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .card p {
+            font-size: 1.1em;
+            color: var(--gris-claro);
+        }
+
+        /* Estilo para los botones */
+        .button {
+            display: inline-block;
+            background-color: var(--plateado);
+            color: var(--negro);
+            padding: 10px 20px;
+            font-size: 1.1em;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: var(--gris);
+        }
+
+        /* Añadir un espacio entre los cards */
+        .card + .card {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Guía Básica de Git</h1>
+
+    <div class="card">
+        <h2>1. Inicializar un repositorio</h2>
+        <p>Se usa para crear un repositorio Git en tu proyecto.</p>
+        <code>git init</code>
+        <a href="https://git-scm.com/doc" class="button" target="_blank">Aprender más</a>
+    </div>
+
+    <div class="card">
+        <h2>2. Ver estado del repositorio</h2>
+        <p>Muestra los archivos modificados, añadidos o sin seguimiento.</p>
+        <code>git status</code>
+    </div>
+
+    <div class="card">
+        <h2>3. Agregar archivos</h2>
+        <p>Agrega archivos al área de preparación (staging).</p>
+        <code>git add archivo.txt</code>
+        <code>git add .</code>
+    </div>
+
+    <div class="card">
+        <h2>4. Crear un commit</h2>
+        <p>Guarda los cambios en el historial del repositorio.</p>
+        <code>git commit -m "Mensaje del commit"</code>
+    </div>
+
+    <div class="card">
+        <h2>5. Crear una rama</h2>
+        <p>Permite trabajar en nuevas funcionalidades sin afectar la principal.</p>
+        <code>git branch nombre-rama</code>
+    </div>
+
+    <div class="card">
+        <h2>6. Cambiar de rama (checkout)</h2>
+        <p>Cambia entre ramas existentes.</p>
+        <code>git checkout nombre-rama</code>
+    </div>
+
+    <div class="card">
+        <h2>7. Crear y cambiar de rama</h2>
+        <p>Crea una nueva rama y te mueve a ella directamente.</p>
+        <code>git checkout -b nombre-rama</code>
+    </div>
+
+    <div class="card">
+        <h2>8. Fusionar ramas (merge)</h2>
+        <p>Une los cambios de una rama a otra.</p>
+        <code>git checkout main</code>
+        <code>git merge nombre-rama</code>
+    </div>
+
+    <div class="card">
+        <h2>9. Ver historial</h2>
+        <p>Muestra los commits realizados.</p>
+        <code>git log</code>
+    </div>
+
+    <div class="card">
+        <h2>10. Conectar a repositorio remoto</h2>
+        <p>Conecta tu proyecto con GitHub u otro servidor.</p>
+        <code>git remote add origin URL</code>
+    </div>
+
+    <div class="card">
+        <h2>11. Subir cambios (push)</h2>
+        <p>Envía los commits al repositorio remoto.</p>
+        <code>git push origin main</code>
+    </div>
+
+    <div class="card">
+        <h2>12. Descargar cambios (pull)</h2>
+        <p>Trae y actualiza los cambios desde el repositorio remoto.</p>
+        <code>git pull origin main</code>
+    </div>
+
+    <div class="card">
+        <h2>Flujo básico de Git</h2>
+        <p>Orden típico de trabajo:</p>
+        <code>
+git init <br>
+git add . <br>
+git commit -m "Primer commit" <br>
+git branch nueva-rama <br>
+git checkout nueva-rama <br>
+git merge nueva-rama <br>
+git push origin main
+        </code>
+    </div>
+
+</div>
+
+</body>
+</html>
