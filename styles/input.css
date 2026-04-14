@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@plugin "@midudev/tailwind-animations";
+
+@font-face {
+    font-family: 'Inter';
+    src: url( '../assets/fonts/Inter.woff2' ) format('woff2');
+    fonts-style: normal;
+    font-weight: 100 700;
+    font-display: swap;
+}
+
+@theme{
+    --color-primary: #1DA1F2;
+    --color-primary-dark: #0d8ddb;
+    --color-secondary: #14171A;
+    --color-accent: #657786;
+
+    /* breakpoints */
+    --breakpoint-sm: 320px;
+
+    /* fuente */
+    --font-sans: 'Inter', sans-serif;
+}
+
+
+
+.social-button{
+    @apply p-2 w-16 h-16 flex items-center justify-center rounded-full hover:scale-110 transition-transform
+    animate-slide-up-fade;
+}
