@@ -1,1 +1,1 @@
-console.log("Prueba de Actividad Smn5 s1")
+console.log("Hola desde la fucnión de Juan")
